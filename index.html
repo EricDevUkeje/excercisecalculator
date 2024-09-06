@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calories Burned Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Find out how much <span>calories</span> you burn from any category of exercise.</h2>
+        <div class="form-group">
+            <label for="exercise">Tell us the exercise of interest:</label>
+            <select id="exercise" onchange="toggleCustomExerciseInput()">
+                <option value="running">Running</option>
+                <option value="swimming">Swimming</option>
+                <option value="cycling">Cycling</option>
+                <option value="walking">Walking</option>
+                <option value="yoga">Yoga</option>
+                <option value="weightlifting">Weightlifting</option>
+                <option value="aerobics">Aerobics</option>
+                <option value="dancing">Dancing</option>
+                <option value="hiking">Hiking</option>
+                <option value="rowing">Rowing</option>
+                <option value="basketball">Basketball</option>
+                <option value="tennis">Tennis</option>
+                <option value="jumping-rope">Jumping Rope</option>
+                <option value="boxing">Boxing</option>
+                <option value="custom">Custom Exercise</option>
+            </select>
+            <input type="text" id="custom-exercise" placeholder="Enter your custom exercise" style="display:none;">
+        </div>
+        <div class="form-group">
+            <label for="weight">What is your current weight?</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+            <select id="weight-unit">
+                <option value="kg">kg</option>
+                <option value="lb">lbs</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration of exercise:</label>
+            <select id="duration">
+                <option value="15">15 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">1 hour</option>
+                <option value="75">1 hour 15 minutes</option>
+                <option value="90">1 hour 30 minutes</option>
+                <option value="105">1 hour 45 minutes</option>
+                <option value="120">2 hours</option>
+            </select>
+            <input type="number" id="custom-duration" placeholder="Or enter a custom duration">
+        </div>
+        <button id="calculate-btn">Calculate Calories Burned</button>
+        
+        <div class="result-card">
+            <h3 id="calories-burned">0 cal</h3>
+            <p>Burned</p>
+        </div>
+        <div class="benefit-card">
+            <p id="exercise-benefit">This exercise is great for targeting the glutes and lower body muscle groups.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
